@@ -68,6 +68,12 @@ class icingaweb2::config (
         auth_resource => $::icingaweb2::auth_resource,
       }
     }
+    'ldap': {
+      icingaweb2::config::authentication_ldap { 'LDAP Authentication':
+        auth_section  => 'icingaweb2',
+        auth_resource => $::icingaweb2::auth_resource,
+      }
+    }
     'external': {
       icingaweb2::config::authentication_external { 'External Authentication':
         auth_section  => 'icingaweb2',
