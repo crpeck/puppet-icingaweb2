@@ -141,14 +141,14 @@ class icingaweb2::config (
   }
 
   icingaweb2::config::resource_ldap { 'icinga_ldap':
-    resource_bind_dn   => $::icingaweb::bind_dn,
-    resource_bind_pw   => $::icingaweb::bind_pw,
-    resouce_encryption => $::icingaweb::encryption,
-    resource_host      => $::icingaweb::host,
-    resource_name      => $::icingaweb::name,
-    resource_port      => $::icingaweb::port,
-    resource_reqcert   => $::icingaweb::reqcert,
-    resource_root_dn   => $::icingaweb::root_dn,
+    resource_bind_dn   => $::icingaweb2::bind_dn,
+    resource_bind_pw   => $::icingaweb2::bind_pw,
+    resouce_encryption => $::icingaweb2::encryption,
+    resource_host      => $::icingaweb2::host,
+    resource_name      => $::icingaweb2::name,
+    resource_port      => $::icingaweb2::port,
+    resource_reqcert   => $::icingaweb2::reqcert,
+    resource_root_dn   => $::icingaweb2::root_dn,
   }
 
   # Configure roles.ini
