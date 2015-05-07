@@ -140,6 +140,17 @@ class icingaweb2::config (
     resource_password => $::icingaweb2::ido_db_pass,
   }
 
+  icingaweb2::config::resource_ldap { 'icinga_ldap':
+    resource_bind_dn   => $::icingaweb::bind_dn,
+    resource_bind_pw   => $::icingaweb::bind_pw,
+    resouce_encryption => $::icingaweb::encryption,
+    resource_host      => $::icingaweb::host,
+    resource_name      => $::icingaweb::name,
+    resource_port      => $::icingaweb::port,
+    resource_reqcert   => $::icingaweb::reqcert,
+    resource_root_dn   => $::icingaweb::root_dn,
+  }
+
   # Configure roles.ini
   icingaweb2::config::roles { 'Admins':
     role_users       => $::icingaweb2::admin_users,
